@@ -1,0 +1,44 @@
+
+
+<ion-content>
+
+
+<ion-row>
+  <ion-col size="12"></ion-col>
+</ion-row>
+<ion-card>
+  <img style="margin-left: 45%; margin-top: 25%; margin-bottom: 20%;" src="/assets/logo.svg" alt=""> 
+  <div style="margin-left: 5%;">
+
+    <ion-label><b>Login</b></ion-label>
+  <p>Enter youremail and password</p>
+  </div>
+</ion-card>
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+  <ion-item>
+    <ion-label position="floating">E-mail <ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input type="text" ngModel required name="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">password<ion-text color="danger">*</ion-text>
+    </ion-label>
+    <ion-input type="number" ngModel required name="password"></ion-input>
+  </ion-item>
+  <p style="margin-left: 60%;">forget password?</p>
+  <ion-button style="width: 60%; margin-left: 20%; margin-top: 2%;" type="submit" (ngSubmit)="onSubmit(form.value)" [disabled]="!form.valid" color="success">
+    login
+  </ion-button>
+  
+</form>
+<div style="text-align: center;">
+<p>Don't have accont?</p> 
+<p > signup</p>
+</div>
+
+
+
+
+
+</ion-content>

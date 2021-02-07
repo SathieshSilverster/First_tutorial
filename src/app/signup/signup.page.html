@@ -1,0 +1,49 @@
+
+
+<ion-content>
+
+  <ion-row>
+    <ion-col size="12"></ion-col>
+  </ion-row>
+  <ion-card>
+    <img style="margin-left: 45%; margin-top: 25%; margin-bottom: 20%;" src="/assets/logo.svg" alt=""> 
+    <div style="margin-left: 5%;">
+  
+      <ion-label><b>signup</b></ion-label>
+    <p>Enter your credential to continue</p>
+    </div>
+  </ion-card>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+    <ion-item>
+      <ion-label position="floating">user name <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input type="text" ngModel required name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input type="text" ngModel required name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">password<ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-input type="number" ngModel required name="password"></ion-input>
+    </ion-item>
+    <p style="margin-left: 4%; font-size: small">By continuing you agree to our Terms of service and privacy policy</p>
+    <ion-button style="width: 60%; margin-left: 20%; margin-top: 2%;" type="submit" (ngSubmit)="onSubmit(form.value)" [disabled]="!form.valid" color="success">
+      signup
+    </ion-button>
+
+    <div style="text-align: center; font-size: small;">
+      <p>Already have an accont?</p> 
+      <p > signup</p>
+      </div>
+    
+  </form>
+
+
+
+
+
+</ion-content>
