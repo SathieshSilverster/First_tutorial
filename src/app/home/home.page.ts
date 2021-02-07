@@ -51,7 +51,11 @@ export class HomePage {
   });
   await actionSheet.present();
 }
-
+async onSubmit(data){
+  console.log(data,data.val)
+let datavalue = data.val
+localStorage.setItem('data',datavalue)
+}
 
 async presentAlert() {
   const alert = await this.alertController.create({

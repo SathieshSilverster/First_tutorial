@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./explore.page.scss'],
 })
 export class ExplorePage implements OnInit {
+  data: any;
 
   constructor() { }
 
   ngOnInit() {
+    this.data = localStorage.getItem('data') 
   }
 
 }
