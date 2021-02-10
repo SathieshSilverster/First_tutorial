@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>add</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+    <ion-item>
+      <ion-label position="floating">value 1 <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required  ngModel name="val1" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Value 2 <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required ngModel name="val2" type="text"></ion-input>
+    </ion-item>
+    <ion-button block color="primary" type="submit" [disabled]="form.invalid">
+      <ion-icon  name="add"></ion-icon> add
+    </ion-button>
+  </form>
+</ion-card>
+<ion-card *ngIf="result">
+  <ion-item>
+    <ion-label>{{result}}</ion-label>
+  </ion-item>
+</ion-card>
+</ion-content>

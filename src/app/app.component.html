@@ -1,37 +1,3 @@
 <ion-app>
-  <ion-menu side="start" auto-hide="true" type="push" contentId="main">
-
-    <ion-content>
-      <ion-menu-toggle auto-hide="true">
-        <ion-item routerLink="/home" routerDirection="backward" class="menu">
-          <ion-icon color="warning" name="home"></ion-icon>&nbsp;&nbsp;
-          <ion-label>Home</ion-label>
-        </ion-item>
-        <br>
-        <ion-item routerLink="/beverages" routerDirection="forward" class="menu">
-          <ion-icon color="warning" name="heart-outline"></ion-icon>&nbsp;&nbsp;
-          <ion-label>Bevarages</ion-label>
-        </ion-item>
-        <br>
-       
-        <ion-item (click)="goToExplore()" class="menu">
-          <ion-icon color="warning" name="heart-outline"></ion-icon>&nbsp;&nbsp;
-          <ion-label>Offer Zone</ion-label>
-        </ion-item>
-        <br>
-        <ion-item (click)="openCategory(1)" class="menu">
-          <ion-icon color="warning" name="heart-outline"></ion-icon>&nbsp;&nbsp;
-          <ion-label>Second Hand Bazar</ion-label>
-        </ion-item>
-        <br>
-        <ion-item>
-          <ion-icon color="warning" name="heart-outline"></ion-icon>&nbsp;&nbsp;
-          <ion-label>Prime Pack</ion-label>
-        </ion-item>
-      </ion-menu-toggle>
-
-    </ion-content>
-  </ion-menu>
-
-  <ion-router-outlet id="main"></ion-router-outlet>
+  <ion-router-outlet></ion-router-outlet>
 </ion-app>
